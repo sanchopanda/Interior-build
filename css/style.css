@@ -2683,6 +2683,16 @@ li {
   border-bottom: 1px solid black;
   color: #00203a; }
 
+.portfolio__tab {
+  display: none; }
+
+.portfolio__tab--active {
+  display: block; }
+
+.portfolio__cap {
+  text-align: center;
+  width: 100%; }
+
 .portfolio__slider {
   width: 100%; }
 
@@ -2797,9 +2807,15 @@ li {
   font-weight: 700; }
 
 .services__card {
+  min-height: 500px; }
+  .services__card h2 {
+    text-align: center;
+    margin-top: 150px; }
+
+.services__tab {
   display: none; }
 
-.services__card--active {
+.services__tab--active {
   display: block; }
 
 .services__img {

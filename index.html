@@ -171,7 +171,7 @@
         </li>
       </ul>
     </div>
-    <div class="col-12 portfolio__slider slider">
+    <div class="col-12 portfolio__slider slider portfolio__tab portfolio__tab--active" data-index="0">
       <div class="slider__wrapper">
         <div class="slider__item portfolio__slide portfolio__living_room_interior">
           <p class="portfolio__description">Дизайн интерьера гостиной</p>
@@ -191,6 +191,12 @@
         </div>
       </div>
     </div>
+    <div class="portfolio__cap portfolio__tab" data-index="1">
+      <h2>Контент</h2>
+    </div>
+    <div class="portfolio__cap portfolio__tab" data-index="2">
+      <h2>Еще контент</h2>
+    </div>
   </section>
 
   <section class="services row container" id="services">
@@ -200,30 +206,34 @@
     <div class="col-xl-3 col-md-12">
     <ul class="services__menu">
       <li class="services__item">
-        <a href="#services__content">Дизайн жилого помещения</a>
+        Дизайн жилого помещения
       </li>
       <li class="services__item">
-        <a href="#services__content">Дизайн отельных комнат</a>
+        Дизайн отельных комнат
       </li>
       <li class="services__item services__item--active">
-        <a href="#services__content">Дизайн коммерческих объектов</a>
+       Дизайн коммерческих объектов
       </li>
       <li class="services__item">
-        <a href="#services__content">Ремонт под ключ</a>
+       Ремонт под ключ
       </li>
       <li class="services__item">
-        <a href="#services__content">Отделочные работы</a>
+        Отделочные работы
       </li>
       <li class="services__item">
-         <a href="#services__content">Выезд дизайнера на дом</a>
+         Выезд дизайнера на дом
       </li>
     </ul>
     </div>
     <div class="col-xl-9 col-md-12">
     <ul class="services__content" id="services__content">
-      <li class="services__card"></li>
-      <li class="services__card"></li>
-      <li class="services__card services__card--active">
+      <li class="services__card services__tab" data-index="0">
+        <h2>Ваш контент</h2>
+      </li>
+      <li class="services__card services__tab" data-index="1">
+        <h2>Ваш контент</h2>
+      </li>
+      <li class="services__card services__tab services__tab--active" data-index="2">
         <div class="services__imgwrapper">
          <img src="img/service-3.jpg" alt="Дизайн коммерческих объектов" class="services__img">
         </div>
@@ -242,9 +252,15 @@
           </div>
         </div>
       </li>
-      <li class="services__card"></li>
-      <li class="services__card"></li>
-      <li class="services__card"></li>
+      <li class="services__card services__tab" data-index="3">
+        <h2>Ваш контент</h2>
+      </li>
+      <li class="services__card services__tab" data-index="4">
+        <h2>Ваш контент</h2>
+      </li>
+      <li class="services__card services__tab" data-index="5">
+        <h2>Ваш контент</h2>
+      </li>
     </ul>
     </div>
   </section>
@@ -415,6 +431,8 @@
  </footer>
 
   <script src="js/toggle.js" type="text/javascript"></script>
+  <script src="js/activePortfolio.js" type="text/javascript"></script>
+  <script src="js/activeServices.js" type="text/javascript"></script>
   <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
   <script src="js/slick.js" type="text/javascript" charset="utf-8"></script>
 
@@ -454,7 +472,6 @@
         $('body,html').animate({scrollTop:0},800);
       });
     });
-
   </script>
 
 
