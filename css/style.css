@@ -2663,14 +2663,16 @@ li {
       background: rgba(24, 44, 61, 0.8);
       -webkit-transition: .8s;
       transition: .8s; }
-  .slick-center .slider__item::before {
-    background: rgba(24, 44, 61, 0); } }
+  .slick-center:before {
+    background: rgba(24, 44, 61, 0) !important; } }
 
 @media (max-width: 767px) {
   .slider__wrapper {
     margin: 0 -20px; }
   .slider .slick-slide {
-    width: calc(100vw - 40px); } }
+    width: calc(100vw - 40px); }
+  .slick-center:before {
+    background: rgba(24, 44, 61, 0) !important; } }
 
 .portfolio__menu {
   display: -webkit-box;

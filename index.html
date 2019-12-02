@@ -7,9 +7,10 @@
 	<!-- <base href="/"> -->
 
 	<title>Дизайн интерьеров</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">    
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">  
+  <link rel="preload" href="img/main-bg.webp" as="image">  
   <link rel="stylesheet" href="css/style.min.css">
-  <link rel="preload" href="img/main-bg.webp">
+  
   <script src="libs/modernizr-webp.js" type="text/javascript"></script>
 
 
@@ -463,54 +464,7 @@
 
   <script src="js/toggle.js" type="text/javascript"></script>
 
-  <script>
-    registerListener('load', setLazy);
-    registerListener('load', lazyLoad);
-    registerListener('scroll', lazyLoad);
-    
-    var lazy = [];
-    
-    function setLazy(){
-        lazy = document.getElementsByClassName('lazy');
-        console.log('Found ' + lazy.length + ' lazy images');
-    } 
-    
-    function lazyLoad(){
-        for(var i=0; i<lazy.length; i++){
-            if(isInViewport(lazy[i])){
-                if (lazy[i].getAttribute('data-src')){
-                    lazy[i].src = lazy[i].getAttribute('data-src');
-                    lazy[i].removeAttribute('data-src');
-                }
-            }
-        }
-        
-        cleanLazy();
-    }
-    
-    function cleanLazy(){
-        lazy = Array.prototype.filter.call(lazy, function(l){ return l.getAttribute('data-src');});
-    }
-    
-    function isInViewport(el){
-        var rect = el.getBoundingClientRect();
-        
-        return (
-            rect.bottom >= 0 && 
-            rect.right >= 0 && 
-            rect.top <= (window.innerHeight || document.documentElement.clientHeight) && 
-            rect.left <= (window.innerWidth || document.documentElement.clientWidth)
-         );
-    }
-    
-    function registerListener(event, func) {
-        if (window.addEventListener) {
-            window.addEventListener(event, func)
-        } else {
-            window.attachEvent('on' + event, func)
-        }
-    }
-    </script>
+  
 
   <script src="js/activePortfolio.js" type="text/javascript"></script>
   <script src="js/activeServices.js" type="text/javascript"></script>
