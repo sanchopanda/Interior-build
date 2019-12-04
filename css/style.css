@@ -3122,7 +3122,9 @@ li {
   color: white; }
 
 @media (max-width: 1169px) {
-  .form__bg {
+  .no-webp .form__bg,
+  .no-js .form__bg,
+  .webp .form__bg {
     width: 100%;
     margin-left: 0px; }
   .form__cover {
