@@ -2670,7 +2670,7 @@ li {
   .slider__wrapper {
     margin: 0 -15px; }
   .slider .slick-slide {
-    width: calc(100vw - 30px); }
+    width: calc(100vw - 50px); }
   .slick-center:before {
     background: rgba(24, 44, 61, 0) !important; } }
 
